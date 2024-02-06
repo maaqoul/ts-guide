@@ -233,8 +233,8 @@ function padLeft(value: string, padding: string | number) {
     return padding + value;
 }
 
-console.log(padLeft("salam", " ")); // Sortie: " salam"
-console.log(padLeft("salam", 4)); // Sortie: "4World"
+console.log(padLeft("salam", " ")); // console: " salam"
+console.log(padLeft("salam", 4)); // console: "4World"
 
 
 //exercice 16
