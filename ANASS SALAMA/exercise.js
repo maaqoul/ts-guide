@@ -59,3 +59,18 @@ function maxNumber() {
 function createVehicle(vehicle) {
     console.log("the Car " + vehicle.make + ", model " + vehicle.model + "was made in rhe year " + vehicle.year);
 }
+function updatePerson(config) {
+    var newPerson = { firstName: 'anass', lastName: 'salama', age: 27 };
+    if (config.age) {
+        newPerson.age = config.age;
+    }
+    return newPerson;
+}
+function moveCircle(circle, newCenterX, newCenterY) {
+    var newCircle = {
+        centerX: newCenterX,
+        centerY: newCenterY,
+        radius: circle.radius
+    };
+    return newCircle;
+}

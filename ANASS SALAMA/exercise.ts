@@ -59,3 +59,39 @@ interface Vehicle {
 function createVehicle(vehicle: Vehicle) {
     console.log("the Car "+vehicle.make+", model "+vehicle.model+"was made in rhe year "+vehicle.year);
 }
+
+// Optional Properties
+interface Person {
+    firstName: string;
+    lastName: string;
+    age?: number;
+}
+
+interface addEmail extends Person {
+    email?: string;
+}
+
+function updatePerson(config: Person): {age: number} {
+    let newPerson = {firstName: 'anass', lastName: 'salama', age: 27}
+    if(config.age) {
+        newPerson.age = config.age;
+    }
+    return newPerson;
+}
+
+// Readonly Properties
+interface Circle {
+    readonly centerX: number,
+    readonly centerY: number,
+    readonly radius: number,
+}
+
+function moveCircle(circle: Circle, newCenterX: number, newCenterY: number): Circle {
+    const newCircle: Circle = {
+        centerX: newCenterX,
+        centerY: newCenterY,
+        radius: circle.radius
+    }
+
+    return newCircle;
+}
